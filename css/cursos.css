@@ -1,0 +1,133 @@
+.page-header {
+    text-align: center;
+    padding: 4rem 1rem 3rem;
+    background: #E3EDFD;
+}
+
+.page-header h1 {
+    color: #4f46e5;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.page-header p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #6b7280;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.search-section {
+    text-align: center;
+    padding: 2rem 1rem 3rem;
+}
+
+.search-section input {
+    width: 100%;
+    max-width: 550px;
+    padding: 1rem 1.2rem;
+    border: 2px solid #d1d5db;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.search-section input:focus {
+    outline: none;
+    border-color: #22c1c3;
+    box-shadow: 0 0 10px rgba(34, 193, 195, 0.25);
+}
+
+
+.categoria {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.categoria h2 {
+    color: #4f46e5;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.curso-card {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.curso-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.curso-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.curso-info {
+    padding: 1.5rem;
+}
+
+.categoria-tag {
+    display: inline-block;
+    background: #22c1c3;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+
+.curso-info h3 {
+    color: #1f2937;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.curso-info p {
+    color: #6b7280;
+    margin-bottom: 0.7rem;
+    line-height: 1.5;
+}
+
+.curso-info strong {
+    color: #374151;
+}
+
+
+@media (max-width: 768px) {
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .categoria h2 {
+        font-size: 1.6rem;
+    }
+
+    .search-section input {
+        width: 90%;
+    }
+
+    .cursos-grid {
+        grid-template-columns: 1fr;
+    }
+}
