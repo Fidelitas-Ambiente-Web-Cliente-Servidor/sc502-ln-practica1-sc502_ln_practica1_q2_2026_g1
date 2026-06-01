@@ -1,92 +1,158 @@
-:root {
-  --color-morado: #7C3AED;
-  --color-azul: #2563EB;
-  --color-cyan: #15C7D6;
-  --color-fondo-claro: #E3EDFD;
-  --color-texto: #1E293B;
-  --color-texto-suave: #64748B;
-  --color-blanco: #FFFFFF;
-  --fuente: 'Poppins', sans-serif;
-}
+/* 
+   Paleta de colores:
 
-* { box-sizing: border-box; }
+   Turquesa: #10d7de;
+   Morado: #7c3aed
+   Celeste: #e0f2fe
+   Blanco: #ffffff
+   Gris texto: #555
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-  font-family: var(--fuente);
-  color: var(--color-texto);
-  margin: 0;
-  background: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
 }
+
 
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background: var(--color-blanco);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-.navbar .logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.3rem;
-  color: var(--color-texto);
+
+.logo {
+    display: flex;
+    align-items: center;
 }
-.navbar .logo img { height: 40px; }
+
+.logo-img {
+    height: 65px;
+    width: auto;
+}
 
 .nav-links {
-  display: flex;
-  gap: 1.8rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    gap: 30px;
+    list-style: none;
 }
+
 .nav-links a {
-  text-decoration: none;
-  color: var(--color-texto);
-  font-weight: 500;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: 0.3s;
 }
-.nav-links a:hover { color: var(--color-morado); }
+
+.nav-links a:hover {
+    color: #10d7de;
+}
 
 
 .nav-links a.active {
-  color: var(--color-cyan);
-  font-weight: 600;
-  border-bottom: 2px solid var(--color-cyan);
-  padding-bottom: 2px;
+    color: #10d7de;
+    font-weight: 600;
 }
 
 .footer {
-  background: var(--color-texto);
-  color: var(--color-blanco);
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 3rem;
-}
-.footer h3 { color: var(--color-cyan); margin: 0 0 0.3rem; }
-.footer p { margin: 0.2rem 0; }
-.footer .redes {
-  display: flex;
-  gap: 1.2rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 1rem 0;
-}
-.footer .redes a {
-  color: var(--color-blanco);
-  text-decoration: none;
-}
-.footer .redes a:hover { color: var(--color-cyan); }
-.footer .creditos {
-  font-size: 0.85rem;
-  color: var(--color-texto-suave);
+    background-color: #340a7c;
+    color: white;
+    padding: 50px 10% 20px;
 }
 
-@media (max-width: 600px) {
-  .navbar { flex-direction: column; gap: 1rem; }
-  .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.social-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.footer-marca {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    width: 350px;
+    height: auto;
+}
+
+.footer-redes {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.footer-redes h4 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.footer-redes a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.footer-redes a:hover {
+    color: #14b8a6;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    opacity: 0.8;
+}
+
+@media(max-width:768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-redes {
+        text-align: center;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
 }
