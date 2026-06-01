@@ -71,7 +71,7 @@ body {
     padding: 50px 10% 20px;
 }
 
-.footer-contenido {
+.footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,7 +83,7 @@ body {
     height: 20px;
 }
 
-.footer-marca {
+.footer-brand {
     display: flex;
     flex-direction: column;
 }
@@ -93,18 +93,18 @@ body {
     height: auto;
 }
 
-.footer-redes {
+.footer-social {
     display: flex;
     flex-direction: column;
     text-align: right;
 }
 
-.footer-redes h4 {
+.footer-social h4 {
     margin-bottom: 15px;
     font-size: 20px;
 }
 
-.footer-redes a {
+.footer-social a {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -115,7 +115,7 @@ body {
     transition: 0.3s;
 }
 
-.footer-redes a:hover {
+.footer-social a:hover {
     color: #14b8a6;
 }
 
@@ -137,7 +137,7 @@ body {
         text-align: center;
     }
 
-    .footer-redes {
+    .footer-social {
         text-align: center;
     }
 }
