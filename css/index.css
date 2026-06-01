@@ -153,12 +153,12 @@
 }
 
 
-.testimonials{
+.testimonial{
     padding: 80px 10%;
     background-color: #f8fafc;
 }
 
-.testimonials-container{
+.testimonial-container{
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -179,7 +179,7 @@
 }
 
 .testimonial-card h4{
-    color: #10d7de;
+    color: #0fd2d9;
 }
 
 
