@@ -1,0 +1,224 @@
+/*
+   contacto.css - Página de Contacto
+   Paleta de colores de style.css:
+   Turquesa: #10d7de
+   Morado:   #7c3aed
+   Celeste:  #e0f2fe
+   Blanco:   #ffffff
+   Gris texto: #555
+*/
+
+.page-header {
+    background: linear-gradient(135deg, #e0f2fe 0%, f0e6ff 100%);
+    padding: 70px 10%;
+    text-align: center;
+    border-bottom: 1px solid #d4e9f7;
+}
+
+.page-header h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #7c3aed;
+    margin-bottom: 14px;
+}
+
+.page-header p {
+    font-size: 1rem;
+    color: #555;
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.logo-img {
+    height: 180px;
+  }
+
+.contact_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 60px 10%;
+    align-items: start;
+}
+
+.form-card {
+    background: #ffffff;
+    border: 1px solid #d4e9f7;
+    border-radius: 16px;
+    padding: 36px;
+    box-shadow: 0 4px 20px rgba(16, 215, 222, 0.08);
+}
+
+.form-card h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #7c3aed;
+    margin-bottom: 28px;
+  }
+  
+  .form-group {
+    margin-bottom: 18px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 7px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 11px 15px;
+    border: 1px solid #c8e4f0;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: #fff;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #10d7de;
+    box-shadow: 0 0 0 3px rgba(16, 215, 222, 0.15);
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+  }
+  
+  .btn-enviar {
+    background: linear-gradient(90deg, #10d7de, #7c3aed);
+    color: #ffffff;
+    border: none;
+    padding: 13px 0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 6px;
+    transition: opacity 0.2s, transform 0.1s;
+  }
+  
+  .btn-enviar:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+  
+  .info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  
+  .info-card {
+    background: #ffffff;
+    border: 1px solid #d4e9f7;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(16, 215, 222, 0.08);
+  }
+  
+  .info-card h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #7c3aed;
+    margin-bottom: 24px;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .info-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .info-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #e0f2fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .info-icon img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .info-item strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3px;
+  }
+  
+  .info-item p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .map-card {
+    background: #ffffff;
+    border: 1px solid #d4e9f7;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(16, 215, 222, 0.08);
+  }
+  
+  .map-card h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #7c3aed;
+    margin-bottom: 20px;
+  }
+  
+  .map-wrapper {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #d4e9f7;
+  }
+  
+  .map-wrapper iframe {
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-section {
+      grid-template-columns: 1fr;
+      padding: 40px 5%;
+    }
+  
+    .page-header {
+      padding: 50px 5%;
+    }
+  
+    .page-header h1 {
+      font-size: 1.7rem;
+    }
+  
+    .form-card,
+    .info-card,
+    .map-card {
+      padding: 24px;
+    }
+  }
