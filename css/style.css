@@ -8,7 +8,7 @@
    Gris texto: #555
  */
 
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -71,7 +71,7 @@ body {
     padding: 50px 10% 20px;
 }
 
-.footer-content {
+.footer-contenido {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,7 +83,7 @@ body {
     height: 20px;
 }
 
-.footer-brand {
+.footer-marca {
     display: flex;
     flex-direction: column;
 }
@@ -93,18 +93,18 @@ body {
     height: auto;
 }
 
-.footer-social {
+.footer-redes {
     display: flex;
     flex-direction: column;
     text-align: right;
 }
 
-.footer-social h4 {
+.footer-redes h4 {
     margin-bottom: 15px;
     font-size: 20px;
 }
 
-.footer-social a {
+.footer-redes a {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -115,7 +115,7 @@ body {
     transition: 0.3s;
 }
 
-.footer-social a:hover {
+.footer-redes a:hover {
     color: #14b8a6;
 }
 
@@ -137,7 +137,7 @@ body {
         text-align: center;
     }
 
-    .footer-social {
+    .footer-redes {
         text-align: center;
     }
 }
