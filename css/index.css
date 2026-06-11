@@ -129,7 +129,7 @@
     background-color: #0db0b6;
 }
 
-.stadistics{
+.statistics{
     background-color: #7c3aed;
     padding: 70px 10%;
     display: flex;
@@ -138,17 +138,17 @@
     gap: 30px;
 }
 
-.stadistics-box{
+.statistics-box{
     text-align: center;
     color: white;
 }
 
-.stadistics-box h3{
+.statistics-box h3{
     font-size: 3rem;
     margin-bottom: 10px;
 }
 
-.stadistics-box p{
+.statistics-box p{
     font-size: 1.1rem;
 }
 
