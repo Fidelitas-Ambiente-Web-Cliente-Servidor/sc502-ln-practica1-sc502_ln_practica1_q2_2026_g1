@@ -1,167 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-    <link rel="stylesheet" href="../css/style.css">
- 
-    <link rel="stylesheet" href="../css/cursos.css">
- 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <title>Learnify</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <link rel="stylesheet" href="../css/cursos.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="../js/cursos.js"></script>
+  <title>Learnify</title>
 </head>
+
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="../img/learnify_logo_horizontal.png"
-                     alt="Learnify Logo"
-                     class="logo-img">
-            </div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../img/learnify_logo_horizontal.png" alt="Learnify Logo" class="logo-img">
+      </div>
 
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="cursos.html" class="active">Cursos</a></li>
-                <li><a href="profesores.html">Profesores</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="cursos.html" class="active">Cursos</a></li>
+        <li><a href="profesores.html">Profesores</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <header class="page-header">
-        <h1>Catálogo de Cursos</h1>
-        <p>
-            Descubrí nuestros programas de formación diseñados para ayudarte
-            a desarrollar habilidades profesionales y tecnológicas.
-        </p>
-    </header>
+  <header class="page-header">
+    <h1>Catálogo de Cursos</h1>
+    <p>
+      Descubrí nuestros programas de formación diseñados para ayudarte
+      a desarrollar habilidades profesionales y tecnológicas.
+    </p>
+  </header>
 
   <section class="search-section">
-    <input type="text" placeholder="Buscar cursos...">
+    <input type="text" id="buscarCurso" placeholder="Buscar cursos...">
+
+    <select id="filtroCategoria">
+      <option value="Todos">Todas las categorías</option>
+      <option value="Tecnología">Tecnología</option>
+      <option value="Negocios y Marketing">Negocios y Marketing</option>
+    </select>
+    <div id="message"> </div>
   </section>
 
   <section class="categoria">
+
     <h2>Tecnología</h2>
 
-    <div class="cursos-grid">
-
-      <article class="curso-card">
-        <img src="../img/hq720.jpg" alt="Curso HTML y CSS">
-        <div class="curso-info">
-          <span class="categoria-tag">Tecnología</span>
-          <h3>Desarrollo Web con HTML y CSS</h3>
-          <p>Aprendé a crear sitios web modernos y responsivos desde cero.</p>
-          <p><strong>Duración:</strong> 8 semanas</p>
-          <p><strong>Precio:</strong> $120</p>
-        </div>
-      </article>
-
-      <article class="curso-card">
-        <img src="../img/cursoJS_conFondo.png" alt="Curso JavaScript">
-        <div class="curso-info">
-          <span class="categoria-tag">Tecnología</span>
-          <h3>JavaScript Intermedio</h3>
-          <p>Domina la programación web dinámica con JavaScript moderno.</p>
-          <p><strong>Duración:</strong> 10 semanas</p>
-          <p><strong>Precio:</strong> $150</p>
-        </div>
-      </article>
-
-      <article class="curso-card">
-        <img src="../img/curso-python-300x169.gif" alt="Curso Python">
-        <div class="curso-info">
-          <span class="categoria-tag">Tecnología</span>
-          <h3>Python para Principiantes</h3>
-          <p>Introducción a la programación utilizando Python.</p>
-          <p><strong>Duración:</strong> 12 semanas</p>
-          <p><strong>Precio:</strong> $180</p>
-        </div>
-      </article>
+    <div id="tecnologiaContainer" class="cursos-grid">
 
     </div>
+
   </section>
 
   <section class="categoria">
+
     <h2>Negocios y Marketing</h2>
 
-    <div class="cursos-grid">
-
-      <article class="curso-card">
-        <img src="../img/istockphoto-2098359215-612x612.jpg" alt="Marketing Digital">
-        <div class="curso-info">
-          <span class="categoria-tag">Marketing</span>
-          <h3>Marketing Digital</h3>
-          <p>Creá estrategias efectivas para redes sociales y publicidad online.</p>
-          <p><strong>Duración:</strong> 6 semanas</p>
-          <p><strong>Precio:</strong> $110</p>
-        </div>
-      </article>
-
-      <article class="curso-card">
-        <img src="../img/cursos-gratis-para-emprendedores.jpg" alt="Emprendimiento">
-        <div class="curso-info">
-          <span class="categoria-tag">Negocios</span>
-          <h3>Emprendimiento e Innovación</h3>
-          <p>Convertí tus ideas en proyectos sostenibles y exitosos.</p>
-          <p><strong>Duración:</strong> 8 semanas</p>
-          <p><strong>Precio:</strong> $140</p>
-        </div>
-      </article>
-
-      <article class="curso-card">
-        <img src="../img/iStock-844535646-600x425.jpg" alt="Gestión de Proyectos">
-        <div class="curso-info">
-          <span class="categoria-tag">Negocios</span>
-          <h3>Gestión de Proyectos</h3>
-          <p>Aprendé metodologías ágiles para liderar equipos y proyectos.</p>
-          <p><strong>Duración:</strong> 10 semanas</p>
-          <p><strong>Precio:</strong> $160</p>
-        </div>
-      </article>
+    <div id="negociosContainer" class="cursos-grid">
 
     </div>
+
   </section>
 
-<footer class="footer">
- 
-        <div class="footer-contenido">
- 
-            <div class="footer-marca">
-                <img src="../img/learnify_logo_white_transparent.png" alt="Learnify Logo" class="footer-logo">
-            </div>
- 
-            <div class="footer-redes">
-                <h4>Síguenos</h4>
- 
-                <a href="#">
-                    Instagram
-                    <img src="../img/instagram.png" alt="Instagram" class="social-icon">
-                </a>
- 
-                <a href="#">
-                    Facebook
-                    <img src="../img/facebook.png" alt="Facebook" class="social-icon">
-                </a>
- 
-                <a href="#">
-                    TikTok
-                    <img src="../img/tik-tok.png" alt="TikTok" class="social-icon">
-                </a>
-            </div>
- 
-        </div>
- 
-        <div class="footer-bottom">
-            <p>© 2026 Learnify. Todos los derechos reservados.</p>
-        </div>
- 
-    </footer>
+  <footer class="footer">
+
+    <div class="footer-contenido">
+
+      <div class="footer-marca">
+        <img src="../img/learnify_logo_white_transparent.png" alt="Learnify Logo" class="footer-logo">
+      </div>
+
+      <div class="footer-redes">
+        <h4>Síguenos</h4>
+
+        <a href="#">
+          Instagram
+          <img src="../img/instagram.png" alt="Instagram" class="social-icon">
+        </a>
+
+        <a href="#">
+          Facebook
+          <img src="../img/facebook.png" alt="Facebook" class="social-icon">
+        </a>
+
+        <a href="#">
+          TikTok
+          <img src="../img/tik-tok.png" alt="TikTok" class="social-icon">
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Learnify. Todos los derechos reservados.</p>
+    </div>
+
+  </footer>
 
 </body>
+
 </html>
