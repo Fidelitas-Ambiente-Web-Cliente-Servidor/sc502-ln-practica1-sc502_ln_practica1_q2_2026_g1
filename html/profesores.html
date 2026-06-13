@@ -34,36 +34,7 @@
     <p>Conocé a las personas expertas que te van a acompañar en cada paso de tu aprendizaje.</p>
   </header>
 
-  <section class="profesores-grid">
-
-    <article class="profesor-card">
-      <img src="../img/carlos.png" alt="Foto de Carlos Méndez">
-      <h3>Carlos Méndez</h3>
-      <span class="especialidad">Desarrollo Web</span>
-      <p>Más de 8 años creando aplicaciones modernas con HTML, CSS y JavaScript.</p>
-    </article>
-
-    <article class="profesor-card">
-      <img src="../img/ana.jpg" alt="Foto de Ana Solís">
-      <h3>Ana Solís</h3>
-      <span class="especialidad">Diseño UX/UI</span>
-      <p>Apasionada por crear experiencias digitales claras, bonitas y fáciles de usar.</p>
-    </article>
-
-    <article class="profesor-card">
-      <img src="../img/luis.jpg" alt="Foto de Luis Vargas">
-      <h3>Luis Vargas</h3>
-      <span class="especialidad">Marketing Digital</span>
-      <p>Experto en estrategias de contenido y crecimiento de marcas en línea.</p>
-    </article>
-
-    <article class="profesor-card">
-      <img src="../img/maria.jpg" alt="Foto de María Rojas">
-      <h3>María Rojas</h3>
-      <span class="especialidad">Ciencia de Datos</span>
-      <p>Enseña a convertir datos en decisiones usando Python y visualización.</p>
-    </article>
-
+  <section class="profesores-grid" id="profesoresGrid">
   </section>
 
   <section class="mision-vision">
@@ -78,6 +49,26 @@
         estudiante aprende, crea y crece junto a los mejores profesores.</p>
     </div>
   </section>
+
+
+  <div class="modal-overlay" id="profesorModal">
+    <div class="modal-contenido">
+      <button type="button" class="modal-cerrar" id="modalCerrar" aria-label="Cerrar">&times;</button>
+
+      <img id="modalFoto" src="" alt="" class="modal-foto">
+      <h3 id="modalNombre"></h3>
+      <span id="modalEspecialidad" class="especialidad"></span>
+      <p id="modalDescripcion"></p>
+
+      <p class="modal-correo">
+        <strong>Correo:</strong>
+        <a id="modalCorreo" href="#"></a>
+      </p>
+
+      <h4 class="modal-subtitulo">Cursos que imparte</h4>
+      <ul id="modalCursos" class="modal-cursos"></ul>
+    </div>
+  </div>
 
   <footer class="footer">
     <div class="footer-contenido">
@@ -108,6 +99,9 @@
       <p>© 2026 Learnify. Todos los derechos reservados.</p>
     </div>
   </footer>
+
+
+  <script src="../js/profesores.js"></script>
 
 </body>
 
