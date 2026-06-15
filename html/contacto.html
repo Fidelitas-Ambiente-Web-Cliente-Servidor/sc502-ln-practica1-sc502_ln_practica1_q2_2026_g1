@@ -15,7 +15,9 @@
         rel="stylesheet">
     <script src="./js/bootstrap.bundle.min.js"></script>
     <title>Learnify</title>
+    
 </head>
+
 <header>
     <nav class="navbar">
         <div class="logo">
@@ -40,28 +42,36 @@
 
         <div class="form-card">
             <h2>Envíanos un mensaje</h2>
-            <form action="#" method="post">
+            <form id="formulario-contacto" action="#" method="post" novalidate>
                 <div class="form-group">
                     <label for="nombre">Nombre completo</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" />
+                    <span class="error-msg" id="error-nombre"></span>
                 </div>
                 <div class="form-group">
                     <label for="correo">Correo electrónico</label>
-                    <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required />
+                    <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" />
+                    <span class="error-msg" id="error-correo"></span>
                   </div>
                 <div class="form-group">
                     <label for="telefono">Teléfono</label>
                     <input type="tel" id="telefono" name="telefono" placeholder="+506 8000-0000" />
+                    <span class="error-msg" id="error-telefono"></span>
                   </div>
                 <div class="form-group">
                     <label for="asunto">Asunto</label>
-                    <input type="text" id="asunto" name="asunto" placeholder="¿En qué podemos ayudarte?" required />
+                    <input type="text" id="asunto" name="asunto" placeholder="¿En qué podemos ayudarte?" />
+                    <span class="error-msg" id="error-asunto"></span>
                   </div>
                 <div class="form-group">
                     <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    <span class="error-msg" id="error-mensaje"></span>
                   </div>
-                  <button type="submit" class="btn-enviar">Enviar mensaje</button>
+                  <div id="mensaje-exito" class="mensaje-exito" style="display:none;">
+                    ¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.
+                </div>
+                <button type="submit" class="btn-enviar" id="btn-enviar" disabled>Enviar mensaje</button>
             </form>
         </div>
         <div class="info-col">
@@ -150,4 +160,5 @@
         </div>
 
     </footer>
+    <script src="../js/contacto.js"></script>
 </body>
