@@ -1,5 +1,16 @@
 //Tarea 2 - Profesores
+//  - Array de mínimo 4 objetos con: nombre, especialidad, descripcion,
+//    foto, correo, cursosQueImparte
+//  - Renderizar las tarjetas dinámicamente al cargar la página
+//  - Al hacer clic en una tarjeta, abrir un modal personalizado con la
+//    información completa del profesor
+//  - El modal se cierra con el botón de cierre o haciendo clic fuera
+//  - Usar atributos data-* para identificar qué profesor se seleccionó
+
+
+//Esperamos a que el HTML esté completamente cargado antes de ejecutar
 document.addEventListener("DOMContentLoaded", function () {
+    //array de objetos con la información de cada profesor.
     const profesores = [
         {
             nombre: "Carlos Méndez",
@@ -42,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
             cursosQueImparte: ["Ciencia de Datos con Python", "Visualización de Datos", "Excel Analítico"],
         },
     ];
-
+    //guardamos en constantes los elementos del HTML que vamos a manipular  
     const grid = document.getElementById("profesoresGrid");
 
     const modal = document.getElementById("profesorModal");
@@ -54,26 +65,30 @@ document.addEventListener("DOMContentLoaded", function () {
     const modalCursos = document.getElementById("modalCursos");
     const btnCerrar = document.getElementById("modalCerrar");
 
+    //recorremos el array y por cada profesor
+    //    construimos su tarjeta con createElement y la agregamos al DOM
+    //    con appendChild xq el HTML no tiene las tarjetas a mano
     function renderizarProfesores() {
         profesores.forEach(function (profesor, indice) {
 
             const tarjeta = document.createElement("article");
             tarjeta.classList.add("profesor-card");
+            //guardamos laposición del profesor dentro del array
             tarjeta.dataset.indice = indice;
 
-
+            // Foto del profesor
             const foto = document.createElement("img");
             foto.src = profesor.foto;
             foto.alt = "Foto de " + profesor.nombre;
-
+            // Nombre
             const nombre = document.createElement("h3");
             nombre.textContent = profesor.nombre;
-
+            // Especialidad
             const especialidad = document.createElement("span");
             especialidad.classList.add("especialidad");
             especialidad.textContent = profesor.especialidad;
 
-
+            // Descripción corta
             const descripcion = document.createElement("p");
             descripcion.textContent = profesor.descripcion;
 
@@ -90,23 +105,31 @@ document.addEventListener("DOMContentLoaded", function () {
             grid.appendChild(tarjeta);
         });
     }
+
+    //modal: se ejecuta al hacer clic en una tarjeta. Usa el índice guardado en data-indice para obtener la información del profesor correspondiente y mostrarla en el modal. Luego, muestra el modal agregando la clase "activo".
     function abrirModal(evento) {
-
+        // currentTarget es la tarjeta que tiene el listener (aunque el
+        // clic haya caído sobre la foto o el texto interno)
         const indice = evento.currentTarget.dataset.indice;
+        // dataset siempre devuelve texto, pero como índice de array
+        // JavaScript lo convierte automáticamente al acceder
 
-        
         const profesor = profesores[indice];
+        // Rellenamos cada parte del modal con los datos del profesor
 
         modalFoto.src = profesor.foto;
         modalFoto.alt = "Foto de " + profesor.nombre;
         modalNombre.textContent = profesor.nombre;
         modalEspecialidad.textContent = profesor.especialidad;
         modalDescripcion.textContent = profesor.descripcion;
+        // El correo es un enlace mailto: para poder escribirle directo
 
         modalCorreo.textContent = profesor.correo;
         modalCorreo.href = "mailto:" + profesor.correo;
 
 
+        // La lista de cursos se limpia y se vuelve a construir cada vez,
+        // para que no queden cursos del profesor anterior
         modalCursos.innerHTML = "";
         profesor.cursosQueImparte.forEach(function (curso) {
             const item = document.createElement("li");
@@ -116,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         modal.classList.add("activo");
     }
-
+    //quitamos la clase "activo" y el CSS lo oculta.
     function cerrarModal() {
         modal.classList.remove("activo");
     }
