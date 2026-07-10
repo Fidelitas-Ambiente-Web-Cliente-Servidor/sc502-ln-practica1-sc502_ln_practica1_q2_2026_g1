@@ -132,7 +132,7 @@ body {
 }
 
 @media(max-width:768px) {
-    .footer-content {
+    .footer-contenido {
         flex-direction: column;
         text-align: center;
     }
