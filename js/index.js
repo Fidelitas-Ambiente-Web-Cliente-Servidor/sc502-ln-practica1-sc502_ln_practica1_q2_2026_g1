@@ -4,7 +4,7 @@
 //	El HTML de index.html no debe contener las tarjetas hardcodeadas; deben generarse completamente desde index.js
 //	El resultado visual debe ser idéntico o superior al de la Tarea #1
 
-document.addEventListener("DOMContentLoaded", function () {
+/* document.addEventListener("DOMContentLoaded", function () {
 
     //Array para almacenar los cursos de Lernify, cada uno con sus propiedades: nombre, descripción, imagen y categoría
     const courses = [
@@ -65,4 +65,4 @@ document.addEventListener("DOMContentLoaded", function () {
         //Esto agrega la tarjeta al contenedor
         coursesContainer.appendChild(card);
     });
-});  
+}); */
