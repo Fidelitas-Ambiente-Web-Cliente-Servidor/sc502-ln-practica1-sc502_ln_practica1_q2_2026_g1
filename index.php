@@ -1,0 +1,33 @@
+<?php
+
+require_once 'config/database.php';
+
+$controllerName = $_GET['controller'] ?? 'index';
+$action         = $_GET['action'] ?? 'index';
+$method         = $_SERVER['REQUEST_METHOD'];
+$id             = isset($_GET['id']) ? (int) $_GET['id'] : null;
+
+
+$controllerFile = __DIR__ . '/controllers/' . ucfirst($controllerName) . 'Controller.php';
+
+if (!file_exists($controllerFile)) {
+    http_response_code(404);
+    die('<h2>404 - Controlador no encontrado.</h2>');
+}
+
+require_once $controllerFile;
+
+$controllerClass = ucfirst($controllerName) . 'Controller';
+$controller = new $controllerClass();
+
+
+switch ($action) {
+
+    case 'index':
+        $controller->index();
+        break;
+
+    default:
+        http_response_code(404);
+        die('<h2>404 - Acción no encontrada.</h2>');
+}
