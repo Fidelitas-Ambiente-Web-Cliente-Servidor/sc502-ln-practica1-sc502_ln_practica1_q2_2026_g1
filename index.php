@@ -7,7 +7,6 @@ $action         = $_GET['action'] ?? 'index';
 $method         = $_SERVER['REQUEST_METHOD'];
 $id             = isset($_GET['id']) ? (int) $_GET['id'] : null;
 
-
 $controllerFile = __DIR__ . '/controllers/' . ucfirst($controllerName) . 'Controller.php';
 
 if (!file_exists($controllerFile)) {
@@ -20,11 +19,46 @@ require_once $controllerFile;
 $controllerClass = ucfirst($controllerName) . 'Controller';
 $controller = new $controllerClass();
 
-
 switch ($action) {
 
     case 'index':
+        // GET:Mostrar listado
         $controller->index();
+        break;
+
+    case 'create':
+        // GET:Mostrar formulario
+        if ($method === 'GET') {
+            $controller->create();
+        }
+        break;
+
+    case 'store':
+        // POST:Guardar registro
+        if ($method === 'POST') {
+            $controller->store();
+        }
+        break;
+
+    case 'edit':
+        // GET:Mostrar formulario de edición
+        if ($method === 'GET' && $id) {
+            $controller->edit($id);
+        }
+        break;
+
+    case 'update':
+        // POST:Actualizar registro
+        if ($method === 'POST' && $id) {
+            $controller->update($id);
+        }
+        break;
+
+    case 'delete':
+        // POST:Eliminar registro
+        if ($method === 'POST' && $id) {
+            $controller->delete($id);
+        }
         break;
 
     default:
