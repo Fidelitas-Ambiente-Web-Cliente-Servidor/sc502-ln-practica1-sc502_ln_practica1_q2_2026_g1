@@ -1,3 +1,4 @@
+/*
 document.addEventListener("DOMContentLoaded", function () {
  
     //Array de cursos
@@ -178,4 +179,4 @@ document.addEventListener("DOMContentLoaded", function () {
     renderCourses(courses);
  
 });
- 
+ */
