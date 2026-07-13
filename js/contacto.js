@@ -1,7 +1,6 @@
 // Selección de elementos del formulario
 const form = document.getElementById('formulario-contacto');
 const btnEnviar = document.getElementById('btn-enviar');
-const mensajeExito = document.getElementById('mensaje-exito');
 
 const nombre = document.getElementById('nombre');
 const correo = document.getElementById('correo');
@@ -84,7 +83,6 @@ function verificarFormulario() {
       validarTelefono() &
       validarAsunto() &
       validarMensaje();
-  
     btnEnviar.disabled = !todoValido;
   }
 
@@ -95,25 +93,23 @@ telefono.addEventListener('input', () => { validarTelefono(); verificarFormulari
 asunto.addEventListener('input', () => { validarAsunto(); verificarFormulario(); });
 mensaje.addEventListener('input', () => { validarMensaje(); verificarFormulario(); });
 
+/* JS de Tarea 2
+   Se comenta según lo indicado en la tarea.
 
-// Evento de envío del formulario
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-  
     // Mostrar mensaje de éxito y limpiar formulario
     mensajeExito.style.display = 'block';
     form.reset();
-  
     // Limpiar clases de validación de todos los campos
     [nombre, correo, telefono, asunto, mensaje].forEach(campo => {
       campo.classList.remove('valido', 'invalido');
     });
-  
     // Deshabilitar botón nuevamente
     btnEnviar.disabled = true;
-  
     // Ocultar mensaje de éxito después de 4 segundos
     setTimeout(() => {
       mensajeExito.style.display = 'none';
     }, 4000);
   });
+*/
