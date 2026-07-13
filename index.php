@@ -22,42 +22,18 @@ $controller = new $controllerClass();
 switch ($action) {
 
     case 'index':
-        // GET:Mostrar listado
         $controller->index();
         break;
 
-    case 'create':
-        // GET:Mostrar formulario
-        if ($method === 'GET') {
-            $controller->create();
+    case 'show':
+        if ($method === 'GET' && $id) {
+            $controller->show($id);
         }
         break;
 
     case 'store':
-        // POST:Guardar registro
         if ($method === 'POST') {
             $controller->store();
-        }
-        break;
-
-    case 'edit':
-        // GET:Mostrar formulario de edición
-        if ($method === 'GET' && $id) {
-            $controller->edit($id);
-        }
-        break;
-
-    case 'update':
-        // POST:Actualizar registro
-        if ($method === 'POST' && $id) {
-            $controller->update($id);
-        }
-        break;
-
-    case 'delete':
-        // POST:Eliminar registro
-        if ($method === 'POST' && $id) {
-            $controller->delete($id);
         }
         break;
 

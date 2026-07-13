@@ -16,7 +16,7 @@ class ContactoController
     // Muestra el formulario de contacto
     public function index(): void
     {
-        require __DIR__ . '/../views/contacto/index.php';
+        require __DIR__ . '/../views/contacto/contacto.php';
     }
 
     // POST ?controller=contacto&action=store
@@ -31,13 +31,13 @@ class ContactoController
 
         if (empty($nombre) || empty($correo) || empty($asunto) || empty($mensaje)) {
             $error = 'El nombre, correo, asunto y mensaje son obligatorios.';
-            require __DIR__ . '/../views/contacto/index.php';
+            require __DIR__ . '/../views/contacto/contacto.php';
             return;
         }
 
         if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
             $error = 'Ingresa un correo electrónico válido.';
-            require __DIR__ . '/../views/contacto/index.php';
+            require __DIR__ . '/../views/contacto/contacto.php';
             return;
         }
 
